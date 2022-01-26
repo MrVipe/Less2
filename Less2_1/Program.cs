@@ -10,12 +10,15 @@ namespace Less2_1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Введите минимальную температару");
-            var Tmin = Console.ReadLine();
-            Console.WriteLine("Введите максимальную температару");
-            var Tmax = Console.ReadLine();
-            var Tsredn = (Convert.ToDouble(Tmax) + Convert.ToDouble(Tmin)) / 2;
-            Console.WriteLine("Средняя температура = " + Tsredn);
+            Console.WriteLine("Введите число");
+            double Number = Convert.ToDouble(Console.ReadLine());
+            if (Number - Math.Round(Number / 2) * 2 == 0)
+                Console.WriteLine("Число четное");
+            else
+            {
+                Console.WriteLine("Число нечетное");
+            }
+
             Console.ReadKey();
         }
     }
