@@ -18,17 +18,23 @@ namespace Less2_1
         static void Main(string[] args)
         {
 
+            bool IsWinter = false;
 
+            Console.WriteLine("Введите температуру");
+            int TTemp = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Введите номер месяца");
             int Month = Convert.ToInt32(Console.ReadLine());
+
 
             switch (Month - 1)
             {
                 case (int)MonthString.Январь:
                     Console.WriteLine(MonthString.Январь);
+                    IsWinter = true;
                     break;
                 case (int)MonthString.Февраль:
                     Console.WriteLine(MonthString.Февраль);
+                    IsWinter = true;
                     break;
                 case (int)MonthString.Март:
                     Console.WriteLine(MonthString.Март);
@@ -59,7 +65,17 @@ namespace Less2_1
                     break;
                 case (int)MonthString.Декабрь:
                     Console.WriteLine(MonthString.Декабрь);
+                    IsWinter = true;
                     break;
+            }
+
+            if (IsWinter && TTemp > 0)
+            {
+                Console.WriteLine("Дождливая зима");
+            }
+            else
+            {
+                Console.WriteLine("Типичный сезон");
             }
 
             Console.ReadKey();
