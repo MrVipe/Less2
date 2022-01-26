@@ -17,6 +17,8 @@ namespace Less2_1
             var Tsredn = (Convert.ToDouble(Tmax) + Convert.ToDouble(Tmin)) / 2;
             Console.WriteLine("Средняя температура = " + Tsredn);
             Console.ReadKey();
+
+
         }
     }
 }
